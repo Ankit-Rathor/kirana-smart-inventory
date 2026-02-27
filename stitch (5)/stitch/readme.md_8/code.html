@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Quick Sales Billing - KiranaIQ Dark</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --ios-blue: #0A84FF;
+            --ios-dark-bg: #000000;
+            --ios-card-bg: #1C1C1E;
+            --ios-navy-bg: #0A192F;
+            --ios-border: #38383A;
+            --vibrant-indigo: #5E5CE6;
+            --vibrant-emerald: #30D158;
+            --glass-bg: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.12);
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            background-color: var(--ios-dark-bg);
+            color: #FFFFFF;
+        }
+        .glass-effect {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex flex-col h-screen overflow-hidden">
+<header class="bg-black/60 backdrop-blur-md sticky top-0 z-10 border-b border-[#2C2C2E] px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[var(--ios-blue)]">bolt</span>
+<h1 class="text-lg font-bold tracking-tight text-white">Quick Sales</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400">barcode_scanner</span>
+<div class="w-8 h-8 rounded-full bg-[#2C2C2E] flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-slate-300">person</span>
+</div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto pb-44">
+<section class="p-4 space-y-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">search</span>
+<input class="w-full bg-[#1C1C1E] border-none rounded-xl py-3 pl-10 pr-4 text-white placeholder-slate-500 focus:ring-2 focus:ring-[var(--ios-blue)] text-sm" placeholder="Search product or scan barcode..." type="text"/>
+</div>
+<div class="bg-[var(--ios-card-bg)] rounded-2xl p-4 border border-[var(--ios-border)]">
+<div class="flex items-center justify-between mb-3">
+<h2 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Active Item</h2>
+<span class="text-[var(--ios-blue)] text-xs font-medium">Clear All</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex-1">
+<h3 class="font-semibold text-base text-white">Basmati Rice (Gold)</h3>
+<p class="text-xs text-slate-400">Stock: 45 kg • ₹120/kg</p>
+</div>
+<div class="flex items-center bg-black/40 rounded-full p-1 border border-[var(--ios-border)]">
+<button class="w-8 h-8 flex items-center justify-center bg-[#2C2C2E] rounded-full shadow-sm text-[var(--ios-blue)]">
+<span class="material-symbols-outlined text-xl">remove</span>
+</button>
+<span class="px-4 font-bold text-lg text-white">2</span>
+<button class="w-8 h-8 flex items-center justify-center bg-[#2C2C2E] rounded-full shadow-sm text-[var(--ios-blue)]">
+<span class="material-symbols-outlined text-xl">add</span>
+</button>
+</div>
+</div>
+<button class="w-full mt-4 py-3 bg-white text-black rounded-xl font-bold text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+                Add to Cart
+            </button>
+</div>
+</section>
+<section class="px-4 py-2">
+<div class="bg-[var(--ios-navy-bg)] rounded-2xl p-5 border border-blue-900/30">
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-bold text-blue-100">Cart Summary</h2>
+<span class="bg-blue-500/20 text-blue-300 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">3 Items</span>
+</div>
+<div class="space-y-3 mb-4">
+<div class="flex justify-between text-sm">
+<span class="text-blue-200/70">Basmati Rice (2kg)</span>
+<span class="font-medium text-white">₹240.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-blue-200/70">Amul Butter (100g)</span>
+<span class="font-medium text-white">₹55.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-blue-200/70">Farm Fresh Eggs (6pcs)</span>
+<span class="font-medium text-white">₹42.00</span>
+</div>
+</div>
+<div class="border-t border-dashed border-blue-800/50 pt-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-400/60 text-lg">sell</span>
+<input class="flex-1 border-none bg-blue-950/50 text-blue-100 rounded-lg py-2 px-3 text-sm focus:ring-0 placeholder-blue-700" placeholder="Add Discount (e.g. 10 or 5%)" type="text"/>
+</div>
+<div class="mt-5 flex items-center justify-between">
+<span class="text-blue-400/80 text-xs italic flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-emerald-400">trending_up</span>
+                    Est. Profit: ₹42.00
+                </span>
+<div class="text-right">
+<p class="text-[10px] text-blue-300/50 uppercase font-black tracking-widest">Total Payable</p>
+<p class="text-3xl font-black text-white">₹337.00</p>
+</div>
+</div>
+</div>
+</section>
+<section class="px-4 py-4 space-y-3">
+<h2 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest ml-1">Payment Method</h2>
+<div class="grid grid-cols-3 gap-3">
+<button class="flex flex-col items-center justify-center p-4 rounded-2xl glass-effect border-2 border-[var(--ios-blue)] text-[var(--ios-blue)]">
+<span class="material-symbols-outlined text-2xl mb-1">payments</span>
+<span class="text-xs font-bold">Cash</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-2xl glass-effect text-slate-300">
+<span class="material-symbols-outlined text-2xl mb-1 text-slate-400">qr_code_2</span>
+<span class="text-xs font-bold">UPI</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-2xl glass-effect text-slate-300">
+<span class="material-symbols-outlined text-2xl mb-1 text-slate-400">book</span>
+<span class="text-xs font-bold">Khata</span>
+</button>
+</div>
+</section>
+</main>
+<div class="fixed bottom-0 left-0 right-0 bg-black/80 backdrop-blur-2xl border-t border-[#2C2C2E] p-4 pb-10">
+<button class="w-full bg-[var(--vibrant-emerald)] hover:brightness-110 text-black rounded-2xl py-4 flex items-center justify-center gap-3 shadow-2xl shadow-emerald-900/20 transition-all active:scale-[0.98]">
+<span class="text-lg font-black uppercase tracking-tight">Complete Sale</span>
+<div class="h-6 w-[1px] bg-black/20"></div>
+<span class="text-lg font-black">₹337.00</span>
+<span class="material-symbols-outlined font-bold">arrow_forward_ios</span>
+</button>
+</div>
+
+</body></html>

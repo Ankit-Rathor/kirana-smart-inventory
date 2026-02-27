@@ -6,6 +6,7 @@ import { useAuthStore } from '@/store/authStore';
 import { Toaster } from 'react-hot-toast';
 import Sidebar from '@/components/Sidebar';
 import Header from '@/components/Header';
+import BottomNav from '@/components/BottomNav';
 
 export default function DashboardLayout({
   children,
@@ -28,13 +29,13 @@ export default function DashboardLayout({
   }
 
   return (
-    <div className="flex h-screen overflow-hidden bg-gray-50">
+    <div className="flex h-screen overflow-hidden bg-background light-theme">
       <Toaster position="top-right" />
-      
+
       {/* Mobile sidebar overlay */}
       {sidebarOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setSidebarOpen(false)}
         />
       )}
@@ -49,10 +50,13 @@ export default function DashboardLayout({
       {/* Main content */}
       <div className="flex-1 flex flex-col overflow-hidden">
         <Header onMenuClick={() => setSidebarOpen(true)} />
-        
-        <main className="flex-1 overflow-y-auto p-4 md:p-6">
+
+        <main className="flex-1 overflow-y-auto p-4 md:p-6 pb-24 bg-background">
           {children}
         </main>
+
+        {/* Bottom Navigation */}
+        <BottomNav />
       </div>
     </div>
   );

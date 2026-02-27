@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Theme Test</title>
+    <style>
+        /* Light Theme CSS from globals.css */
+        :root {
+            color-scheme: light !important;
+            --background: #f8fafc;
+            --foreground: #0f172a;
+            --primary: #2563eb;
+            --border: #e2e8f0;
+            --card: #ffffff;
+        }
+
+        * {
+            color-scheme: light !important;
+        }
+
+        html {
+            background-color: #f8fafc !important;
+        }
+
+        body {
+            background-color: #f8fafc !important;
+            color: #0f172a !important;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .light-theme {
+            background-color: #ffffff !important;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn-logout {
+            background: #fee2e2;
+            color: #dc2626;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 1px solid #fecaca;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-logout:hover {
+            background: #fecaca;
+        }
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .user-menu:hover {
+            background: #f1f5f9;
+        }
+
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 60px;
+            right: 24px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 8px;
+            min-width: 200px;
+        }
+
+        .dropdown-item {
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .dropdown-item:hover {
+            background: #fef2f2;
+            color: #dc2626;
+        }
+
+        h1 {
+            color: #111827;
+        }
+
+        p {
+            color: #4b5563;
+        }
+    </style>
+</head>
+<body>
+    <header class="light-theme">
+        <div>
+            <h1 style="margin: 0; font-size: 20px;">KiranaIQ</h1>
+            <p style="margin: 4px 0 0 0; font-size: 12px;">Dashboard</p>
+        </div>
+        <div style="position: relative;">
+            <div class="user-menu">
+                <div class="avatar">U</div>
+                <div>
+                    <div style="font-size: 14px; font-weight: 600;">User Name</div>
+                    <div style="font-size: 12px; color: #64748b;">Store Owner</div>
+                </div>
+                <span>▼</span>
+            </div>
+            <div class="dropdown">
+                <div style="padding: 8px 12px; border-bottom: 1px solid #e2e8f0;">
+                    <div style="font-size: 14px; font-weight: 600;">User Name</div>
+                    <div style="font-size: 12px; color: #64748b;">user@example.com</div>
+                </div>
+                <div class="dropdown-item" onclick="alert('Logout clicked!')">
+                    🚪 Logout
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div style="padding: 24px;">
+        <div class="card">
+            <h2 style="margin-top: 0;">✅ Light Theme Applied</h2>
+            <p>This page demonstrates the light theme with:</p>
+            <ul>
+                <li>White background for header and cards</li>
+                <li>Light gray borders (#e2e8f0)</li>
+                <li>Dark text for readability</li>
+                <li>User dropdown menu with logout</li>
+            </ul>
+            <button class="btn-primary">Primary Button</button>
+            <button class="btn-logout" style="margin-left: 12px;">
+                🚪 Logout
+            </button>
+        </div>
+
+        <div class="card">
+            <h3 style="margin-top: 0;">Color Palette</h3>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <div style="width: 80px; height: 80px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px;">Background</div>
+                <div style="width: 80px; height: 80px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px;">Card</div>
+                <div style="width: 80px; height: 80px; background: #2563eb; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: white;">Primary</div>
+                <div style="width: 80px; height: 80px; background: #22c55e; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: white;">Success</div>
+                <div style="width: 80px; height: 80px; background: #ef4444; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: white;">Danger</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
